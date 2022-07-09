@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+<div class="main">
+    <p>
+        
+    </p>
+    <div  id="k" onclick="start()">START!</div><br>
+    <br>
+    輸入一組四位數字(1~9數字不重複):
+    <br>
+    <form>
+    <!--幹限制字元數就這麼簡單喔 oninput="if(value.length>11)value=value.slice(0,11)" -->
+    <input id="num" oninput="if(value.length>4)value=value.slice(0,4)" type="number"><br><br>
+
+    <input type="submit" id="submit" onclick="ok()" value="猜">
+
+    <p id="demo"></p>
+    </form>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
