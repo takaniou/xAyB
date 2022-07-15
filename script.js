@@ -1,3 +1,5 @@
+window.onload = start();
+
 var v=new Array(4);//抽
 var an=new Array(4);//家
 var a;
