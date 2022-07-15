@@ -2,7 +2,7 @@ var v=new Array(4);//抽
 var an=new Array(4);//家
 var a;
 var b;
-function start()
+window.onload = function start()
 {
     for (let i=0;i<4;i++)
     {
