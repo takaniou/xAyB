@@ -1,17 +1,23 @@
+// 讀入網頁後就先隨機一組
 window.onload = function () {
     start();
 }
+
+// 全域用
 var v = new Array(4);//抽取數字陣列
 var an = new Array(4);//家
 var a;
 var b;
+var emp = 0;
+
+// 抽取數字
 function start() {
     for (let i = 0; i < 4; i++) {
         v[i] = ((Math.ceil(Math.random() * 9)));
-        console.log("i=", i, v[i])
+        // console.log("i=", i, v[i])
         for (let k = 0; k < 4; k++) {
             if (v[i] == v[k]) {
-                console.log("k=", k, v[k])
+                // console.log("k=", k, v[k])
                 if (i != k) {
                     v[i] = ((Math.ceil(Math.random() * 9)));
                     i = 0;
@@ -22,26 +28,44 @@ function start() {
     // document.getElementById("k").style.visibility="hidden";
     // alert("成功抽取");//+v[0]+" "+v[1]+" "+v[2]+" "+v[3]
     document.getElementById("demo").innerHTML = "";
-    console.log(v);
+    // console.log(v);
 }
 
+// 輸入數字+判定
 function ok() {
     var ans;
     text = "";
     ans = document.getElementById("num").value;
     ansStr = ans.length;
+    document.getElementById("sign").innerHTML = "";
+
     if (ansStr < 4) {
         alert("請輸入四位數字");
         document.getElementById("num").value = "";
     }
     else {
+        // 將輸入的四位數字拆成四個個位數塞進陣列
         for (let i = 3; i >= 0; i--) {
             an[i] = ans % 10;
             ans = Math.floor(ans / 10);
-            //alert(an[i]);
         }
+
         a = 0;
         b = 0;
+
+        for (let i = 0; i < 4; i++) {
+            for (let n = 3; n > i; n--) {
+                if (an[i] == an[n]) {
+                    // alert("數字不可重複");
+                    document.getElementById("sign").innerHTML = "！數字不可重複！";
+                    emp = 1;
+                    break;
+                }
+            }
+        }
+
+
+
         for (let i = 0; i < 4; i++) {
             for (let k = 0; k < 4; k++) {
                 if (v[k] == an[i]) {
@@ -61,9 +85,12 @@ function ok() {
             document.getElementById("num").value = "";
             start();
         }
+        else if (emp == 1) {
+            document.getElementById("num").value = "";
+            emp = 0;
+        }
         else {
             let ans = document.getElementById("num").value;
-            // alert(a+"A"+" "+(b-a)+"B");
             document.getElementById("demo").innerHTML += ans + "&emsp;=>&emsp;" + a + "A" + " " + (b - a) + "B<br>";
             document.getElementById("num").value = "";
         }

@@ -8,7 +8,7 @@
 
 
 body {
-    background-color:var(--bgc);
+    background-color: var(--bgc);
     color: var(--maincolor);
     font-family: '微軟正黑體';
 }
@@ -22,15 +22,15 @@ a:visited {
 }
 
 
-.main{
+.main {
     display: block;
     background-color: var(--divbgc);
-    width:500px;
+    width: 500px;
     text-align: center;
     line-height: 1.8;
     margin: 0 auto;
     padding: 50px;
-    transform: translate(0,calc(50vh - 400px));
+    transform: translate(0, calc(50vh - 400px));
     border-radius: 50px 0 50px 0;
 }
 
@@ -39,6 +39,7 @@ input[type="number"] {
     width: 120px;
     text-align: center;
     margin: 20px;
+    margin-bottom: 5px;
     font-size: 2em;
     background-color: var(--num);
     border: solid var(--maincolor) 1px;
@@ -50,16 +51,16 @@ input[type="number"] {
 /* Chrome, Safari, Edge, Opera 移除數字輸入欄位箭頭 */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+    -webkit-appearance: none;
+    margin: 0;
 }
 
-#k{
+#k {
     display: block;
     height: 40px;
-    width: 100px;
-    border: solid var(--link) 1px;
-    border-radius: 5px;
+    width: 40px;
+    border: solid var(--maincolor) 2px;
+    border-radius: 50%;
     line-height: 40px;
     margin: 0 auto;
     font-size: 1.2em;
@@ -88,4 +89,12 @@ input::-webkit-inner-spin-button {
     font-size: 1.8em;
     font-family: "微軟正黑體";
     font-weight: 800;
+}
+
+#sign {
+    display: block;
+    height: 40px;
+    color: #b14e35;
+    font-weight: 900;
+    margin-top: 5px;
 }
