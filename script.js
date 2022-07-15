@@ -1,3 +1,4 @@
+window.onload = function(){
 var v=new Array(4);//抽
 var an=new Array(4);//家
 var a;
@@ -22,6 +23,7 @@ function start()
     document.getElementById("k").style.visibility="hidden";
     // alert("成功抽取");//+v[0]+" "+v[1]+" "+v[2]+" "+v[3]
     document.getElementById("demo").innerHTML="";
+}
 }
 function ok()
 {
