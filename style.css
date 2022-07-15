@@ -73,6 +73,11 @@ input::-webkit-inner-spin-button {
     border-color: var(--maincolor);
 }
 
+#k:active {
+    background-color: var(--maincolor);
+    color: var(--link);
+}
+
 #submit {
     height: 100px;
     width: 100px;
