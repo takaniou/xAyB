@@ -31,6 +31,15 @@ function start() {
     // console.log(v);
 }
 
+// 認輸
+function showAns() {
+    var realAns = v[0] * 1000 + v[1] * 100 + v[2] * 10 + v[3];
+    // document.getElementById("help").innerHTML = realAns;
+    // document.getElementById("demo").innerHTML += "===【" + realAns + "】===";
+    alert("正解\n" + "===【" + realAns + "】===");
+    start();
+}
+
 // 輸入數字+判定
 function ok() {
     var ans;
@@ -40,7 +49,8 @@ function ok() {
     document.getElementById("sign").innerHTML = "";
 
     if (ansStr < 4) {
-        alert("請輸入四位數字");
+        // alert("請輸入四位數字");
+        document.getElementById("sign").innerHTML = "！請輸入四位數字！";
         document.getElementById("num").value = "";
     }
     else {
