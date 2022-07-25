@@ -1,0 +1,118 @@
+:root {
+    --bgc: #818891;
+    --maincolor: #dce0c5;
+    --divbgc: #454850;
+    --link: rgb(255, 255, 255);
+    --num: #9198a1;
+}
+
+
+body {
+    background-color: var(--bgc);
+    color: var(--maincolor);
+    font-family: '微軟正黑體';
+}
+
+/* 未訪問連結*/
+a:link,
+a:hover,
+a:active,
+a:visited {
+    color: var(--link);
+}
+
+
+.main {
+    display: block;
+    position: relative;
+    background-color: var(--divbgc);
+    width: 500px;
+    text-align: center;
+    line-height: 1.8;
+    margin: 0 auto;
+    padding: 50px;
+    transform: translate(0, calc(50vh - 400px));
+    border-radius: 50px 0 50px 0;
+}
+
+input[type="number"] {
+    height: 40px;
+    width: 160px;
+    text-align: center;
+    margin: 20px;
+    margin-bottom: 5px;
+    font-size: 2em;
+    background-color: var(--num);
+    border: solid var(--maincolor) 1px;
+    border-radius: 10px;
+}
+
+
+
+/* Chrome, Safari, Edge, Opera 移除數字輸入欄位箭頭 */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+#k {
+    display: block;
+    height: 40px;
+    width: 40px;
+    border: solid var(--maincolor) 2px;
+    border-radius: 50%;
+    line-height: 40px;
+    margin: 0 auto;
+    font-size: 1.2em;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#k:hover {
+    background-color: var(--bgc);
+    border-color: var(--maincolor);
+}
+
+#k:active {
+    background-color: var(--maincolor);
+    color: var(--link);
+}
+
+#submit {
+    height: 100px;
+    width: 100px;
+    border: solid var(--link) 2px;
+    border-radius: 50%;
+    background-color: #33469c;
+    color: var(--link);
+    font-size: 1.8em;
+    font-family: "微軟正黑體";
+    font-weight: 800;
+}
+
+#sign {
+    display: block;
+    height: 40px;
+    color: #ff6955;
+    font-weight: 900;
+    margin-top: 5px;
+}
+
+.main #help {
+    display: block;
+    width: 120px;
+    height: 40px;
+    background-color: var(--divbgc);
+    color: #97957f;
+    text-align: center;
+    line-height: 40px;
+    position: absolute;
+    top: -40px;
+    right: 0;
+    border-radius: 10px 10px 0 0;
+    padding-bottom: 0px;
+    font-size: 0.85em;
+    cursor: pointer;
+}
